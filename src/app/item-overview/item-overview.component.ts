@@ -12,7 +12,6 @@ export class ItemOverviewComponent implements OnInit {
   items: Item[] = [];
   searchText?: string;
 
-
   constructor(private itemService: ItemService) {
   }
 
@@ -31,7 +30,4 @@ export class ItemOverviewComponent implements OnInit {
       .subscribe(items => this.items = items);
   }
 
-  addItemForm() {
-
-  }
 }

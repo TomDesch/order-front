@@ -9,13 +9,15 @@ import { ItemOverviewComponent } from './item-overview/item-overview.component';
 import { NameFilterPipe } from './pipes/name-filter.pipe';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AddItemFormComponent } from './add-item-form/add-item-form.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemOverviewComponent,
     NameFilterPipe,
-    AddItemFormComponent
+    AddItemFormComponent,
+    HomepageComponent
   ],
 
   imports: [
