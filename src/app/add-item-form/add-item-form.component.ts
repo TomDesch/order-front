@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
 import {ItemService} from "../service/item.service";
 import {Item} from "../model/Item";
@@ -19,7 +19,8 @@ export class AddItemFormComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private itemService: ItemService) { }
+    private itemService: ItemService) {
+  }
 
   ngOnInit(): void {
   }
