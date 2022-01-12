@@ -13,7 +13,7 @@ export class ItemService {
 
 
   constructor(private http: HttpClient) {
-    this.url = `${environment.backendUrl}/customers`;
+    this.url = `${environment.backendUrl}/items`;
   }
 
   getItems(): Observable<any> {
