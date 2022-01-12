@@ -8,16 +8,21 @@ import {Item} from "../model/Item";
   providedIn: 'root'
 })
 export class ItemService {
-  private url: string;
+  private readonly _url: string;
   httpOptions = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
 
 
   constructor(private http: HttpClient) {
-    this.url = `${environment.backendUrl}/items`;
+    this._url = `${environment.backendUrl}/items`;
+  }
+
+
+  get url(): string {
+    return this._url;
   }
 
   getItems(): Observable<any> {
-    return this.http.get<Item[]>(this.url)
+    return this.http.get<Item[]>(this._url)
       .pipe(
         map(items => items.sort((i1: Item, i2: Item) => i1.name.localeCompare(i2.name)))
       );
