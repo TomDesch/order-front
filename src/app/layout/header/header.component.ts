@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
   private readonly _title: string;
 
   constructor() {
-    this._title = 'ORDER TEST';
+    this._title = 'Örder webshop';
   }
 
   get title(): string {

@@ -1,19 +1,24 @@
 <!--    Display all the items (matching filter) -->
-<div id="gallery" class="col-md-9">
-  <div *ngIf="items">
-<!--    <div *ngFor="let pet of pets | nameFilter: searchText" class="gallery">-->
-    <div *ngFor="let item of items">
-<!--      <div class="gallery-pet" (click)="selectPet(pet)" [ngClass]="{'active' : selectedPet === pet}">-->
-      <div class="gallery-pet">
-        <div class="gallery-pet fader">
-<!--          <img class="profile-picture" [src]="'https://pettinder.herokuapp.com/'+ pet.image">-->
-          <div class="overlay">
-            <div class="overlay-text">{{item.name}}</div>
+<div class="container-fluid">
+  <div class="row">
+    <div id="gallery" class="col-md-9">
+      <div *ngIf="items" >
+        <!--    <div *ngFor="let pet of pets | nameFilter: searchText" class="gallery">-->
+        <div *ngFor="let item of items" class="gallery">
+          <!--      <div class="gallery-pet" (click)="selectPet(pet)" [ngClass]="{'active' : selectedPet === pet}">-->
+          <div class="gallery-pet">
+            <div class="gallery-pet fader">
+                        <img class="item-image" src="assets/images/placeholder.png">
+              <div class="overlay">
+                <div class="overlay-text">{{item.name}}</div>
+                <p></p>
+                <br>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <!--todo fix layout-->
