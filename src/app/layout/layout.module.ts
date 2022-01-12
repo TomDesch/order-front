@@ -6,11 +6,13 @@ import { LayoutComponent } from './layout/layout.component';
 import {RouterModule} from "@angular/router";
 
 
-
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
+    LayoutComponent
+  ],
+  exports: [
     LayoutComponent
   ],
   imports: [
