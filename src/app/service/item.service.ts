@@ -28,4 +28,7 @@ export class ItemService {
       );
   }
 
+  addItem(item: Item): Observable<Item> {
+    return this.http.post<Item>(this.url, item, this.httpOptions);
+  }
 }

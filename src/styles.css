@@ -102,6 +102,18 @@ form {
   padding-right: 5px;
 }
 
+.col-2 {
+  flex: 2;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.col-3 {
+  flex: 3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .col-4 {
   flex: 4;
   padding-left: 5px;
@@ -133,18 +145,19 @@ form {
 
 .btn:hover {
   text-decoration: none;
+  background: #617ade;
 }
 
 .btn {
+  background: rgba(23, 53, 93, 0.91);
+  color: #ffffff;
+
   font-size: 1rem;
   font-weight: 600;
 
   border-radius: 10px;
 
-  padding-top: 0.5rem;
-  padding-right: 0.75rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.75rem;
+  padding: 0.5rem 0.75rem;
 
   user-select: none;
 
@@ -205,4 +218,28 @@ form {
   justify-content: flex-end;
   position: relative;
 
+}
+
+.btn.add {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  padding: 0.2em 0.4em;
+}
+
+.btn.add:hover {
+  color: #000000;
+}
+
+
+.tiny-dialog {
+  display: flex;
+  justify-content: right;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px;
+  position: center;
+  /*top: -60px*/
 }

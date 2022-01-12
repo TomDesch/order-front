@@ -14,9 +14,7 @@ export class ItemOverviewComponent implements OnInit {
 
 
   constructor(private itemService: ItemService) {
-
   }
-
 
   ngOnInit(): void {
     this.getItems();
@@ -33,4 +31,7 @@ export class ItemOverviewComponent implements OnInit {
       .subscribe(items => this.items = items);
   }
 
+  addItemForm() {
+
+  }
 }

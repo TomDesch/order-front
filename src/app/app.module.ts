@@ -7,13 +7,15 @@ import {HttpClientModule} from "@angular/common/http";
 import {LayoutModule} from "./layout/layout.module";
 import { ItemOverviewComponent } from './item-overview/item-overview.component';
 import { NameFilterPipe } from './pipes/name-filter.pipe';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { AddItemFormComponent } from './add-item-form/add-item-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemOverviewComponent,
-    NameFilterPipe
+    NameFilterPipe,
+    AddItemFormComponent
   ],
 
   imports: [
@@ -21,7 +23,8 @@ import {FormsModule} from "@angular/forms";
     LayoutModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
 
   providers: [],

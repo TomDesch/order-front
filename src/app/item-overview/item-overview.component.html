@@ -2,11 +2,18 @@
   <section>
     <!--    Display the search bar for the item names -->
     <div class="row search-bar">
+
+      <a class="col-3 btn add" [routerLink]="['items/add-item']">Add new item</a>
+
+      <br>
+
       <input
         class="col-4 form-control"
         placeholder="Filter by name..."
         [(ngModel)]="searchText">
+
     </div>
+
 
     <h3 class="section-title">Items</h3>
 
