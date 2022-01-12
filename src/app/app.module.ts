@@ -6,20 +6,22 @@ import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
 import {LayoutModule} from "./layout/layout.module";
 import { ItemOverviewComponent } from './item-overview/item-overview.component';
-import { UrgencyPipe } from './pipes/urgency.pipe';
+import { NameFilterPipe } from './pipes/name-filter.pipe';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemOverviewComponent,
-    UrgencyPipe
+    NameFilterPipe
   ],
 
   imports: [
     BrowserModule,
     LayoutModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
 
   providers: [],
