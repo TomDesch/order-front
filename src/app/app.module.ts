@@ -6,11 +6,13 @@ import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
 import {LayoutModule} from "./layout/layout.module";
 import { ItemOverviewComponent } from './item-overview/item-overview.component';
+import { UrgencyPipe } from './pipes/urgency.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ItemOverviewComponent
+    ItemOverviewComponent,
+    UrgencyPipe
   ],
 
   imports: [

@@ -18,14 +18,9 @@
               <div>Price: &euro; {{item.price}}</div>
 
               <div class="stock">
-                <span>{{item.stockUrgency === "STOCK_HIGH" ? "HIGH" : "LOW"}}</span>
-<!--                //todo create a pipe to show the icon and display HIGH, MED or LOW-->
-
-
-
-<!--                <span>{{item.stockUrgency}} === STOCK_HIGH</span>-->
-<!--                <img class="icon" src="../../assets/img/{{valueNAme e.g. Urgency}}-icon.png" alt="{{valueName}}">-->
-                <img class="icon" src="../../assets/img/warning-icon.png" alt="warning">
+                <span>{{getStockUrgencyShortened(item)}}</span>
+                <img class="icon" src="../../assets/img/{{getStockUrgencyShortened(item)}}-power.png" alt="{{getStockUrgencyShortened(item)}}">
+<!--                <img class="icon" src="../../assets/img/warning-icon.png" alt="warning">-->
               </div>
 
             </div>

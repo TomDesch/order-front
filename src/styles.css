@@ -187,7 +187,9 @@ form {
 
 .icon {
   position: relative;
-  top: -4px;
+  height: 30px;
+  left: 5px;
+  top: -5px;
 }
 
 .stock {
