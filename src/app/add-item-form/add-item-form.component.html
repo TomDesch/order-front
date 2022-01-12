@@ -1,0 +1,41 @@
+<main>
+  <h3 class="section-title">Create Item</h3>
+
+  <section>
+    <div class="form-control">
+      <form [formGroup]="addItemForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="name">Name </label>
+          <input id="name" type="text" formControlName="name">
+        </div>
+
+        <div>
+          <label for="description">Description </label>
+          <input id="description" type="text" formControlName="description">
+        </div>
+
+        <div>
+          <label for="price">Price </label>
+          <input id="price" type="number" formControlName="price">
+        </div>
+
+        <div>
+          <label for="stockAmount">Amount of stock </label>
+          <input id="stockAmount" type="number" formControlName="stockAmount">
+        </div>
+
+        <br>
+        <button class="button" type="submit">Add Item!</button>
+
+      </form>
+
+    </div>
+  </section>
+
+<!--  todo fix these brs wtf-->
+
+  <br>
+  <br>
+  <br>
+  <br>
+</main>
