@@ -252,3 +252,10 @@ form {
   margin-bottom: 1px;
 }
 
+.section-errors {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /*//todo fix this margin bottom wtf why is it not auto adapting*/
+  margin-bottom: 250px;
+}
