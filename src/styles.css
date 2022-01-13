@@ -240,7 +240,6 @@ form {
   padding: 10px 20px;
   margin: 10px;
   position: center;
-  /*top: -60px*/
 }
 
 .error-messaging {
@@ -255,6 +254,11 @@ form {
   display: flex;
   justify-content: center;
   position: relative;
-  /*//todo fix this margin bottom wtf why is it not auto adapting*/
-  margin-bottom: 250px;
 }
+
+.create-item-form {
+  display: flex;
+  justify-content: center;
+  position: center;
+}
+

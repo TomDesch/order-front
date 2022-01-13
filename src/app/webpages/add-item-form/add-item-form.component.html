@@ -2,25 +2,26 @@
   <h3 class="section-title">Create Item</h3>
 
   <section class="section-errors">
-    <div class="form-control">
+    <div class="col-4 create-item-form">
       <form [formGroup]="addItemForm" (ngSubmit)="onSubmit()">
         <div>
-          <label for="name">Name </label>
+          <label for="name">Name </label> <br>
           <input id="name" type="text" formControlName="name">
         </div>
 
         <div>
           <label for="description">Description </label>
-          <input id="description" type="text" formControlName="description">
+          <br>
+          <textarea id="description" formControlName="description" maxlength="255"></textarea>
         </div>
 
         <div>
-          <label for="price">Price </label>
+          <label for="price">Price </label> <br>
           <input id="price" type="number" formControlName="price">
         </div>
 
         <div>
-          <label for="amountOfStock">Amount of stock </label>
+          <label for="amountOfStock">Amount of stock </label> <br>
           <input id="amountOfStock" type="number" formControlName="amountOfStock">
         </div>
 

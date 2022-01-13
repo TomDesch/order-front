@@ -12,13 +12,36 @@
 <!--No changes to the data can be made here, all contents is presented as labels or as read-only form elements-->
 <!--You can already add the Edit button as a placeholder.-->
 
-<ng-container>
-  <section id="item-details" class="tiny-dialog fader" *ngIf="itemToDisplay$ | async as itemData">
-    <label>{{itemData.id}}</label>
-    <label>{{itemData.name}}</label>
-    <label>{{itemData.description}}</label>
-    <label>{{itemData.price}}</label>
-    <label>{{itemData.amountOfStock}}</label>
+<ng-container class="row" xmlns="http://www.w3.org/1999/html">
+  <section  class="col-1" *ngIf="itemToDisplay$ | async as itemData">
+
+    <div class="item-overview-display">
+      <p class="item-title">Item ID:</p>
+      <input class="item-overview-box" type="text" [readonly]="true" placeholder="{{itemData.id}} "/>
+    </div>
+
+
+    <div class="item-overview-display">
+      <p class="item-title">Item name:</p>
+      <input class="item-overview-box" type="text" [readonly]="true" placeholder="{{itemData.name}}"/>
+    </div>
+
+    <div class="item-overview-display">
+      <p class="item-title">Description:</p>
+      <textarea class="item-overview-box" [readonly]="true" placeholder="{{itemData.description}}"></textarea>
+    </div>
+
+    <div class="item-overview-display">
+      <p class="item-title">Price:</p>
+      <input class="item-overview-box" type="text" [readonly]="true" placeholder="€ {{itemData.price}}"/>
+    </div>
+
+    <div class="item-overview-display">
+      <p class="item-title">Amount in stock:</p>
+      <input class="item-overview-box" type="text" [readonly]="true" placeholder="{{itemData.amountOfStock}}"/>
+    </div>
 
   </section>
 </ng-container>
+
+

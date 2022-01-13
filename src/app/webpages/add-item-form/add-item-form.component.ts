@@ -36,10 +36,9 @@ export class AddItemFormComponent implements OnInit {
     this.itemService.addItem(item)
       .subscribe(
         {
-          next: () => {
+          next: (createdItem) => {
             console.log(`Created ${item.name}`);
-            //todo need then?
-            this.router.navigate(['items']);
+            this.router.navigate(['items/' + (createdItem).id]);
           },
           error: (error) => {
             console.log(`Error creating item` + error);
