@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ItemService} from "../../service/item.service";
 import {Item} from "../../model/Item";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-item-overview',
@@ -9,10 +10,12 @@ import {Item} from "../../model/Item";
 })
 export class ItemOverviewComponent implements OnInit {
 
+
   items: Item[] = [];
   searchText?: string;
 
-  constructor(private itemService: ItemService) {
+  constructor(private itemService: ItemService,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -29,5 +32,11 @@ export class ItemOverviewComponent implements OnInit {
     this.itemService.getItems()
       .subscribe(items => this.items = items);
   }
+
+  viewItemDetails(item: Item): void{
+    this.router.navigate(['items/' + item.id]);
+  }
+
+
 
 }

@@ -11,24 +11,27 @@ export class ItemService {
   private readonly _url: string;
   httpOptions = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
 
-
   constructor(private http: HttpClient) {
     this._url = `${environment.backendUrl}/items`;
   }
-
 
   get url(): string {
     return this._url;
   }
 
-  getItems(): Observable<any> {
+  getItems(): Observable<Item[]> {
     return this.http.get<Item[]>(this._url)
       .pipe(
-        map(items => items.sort((i1: Item, i2: Item) => i1.name.localeCompare(i2.name)))
+        map(items => items
+          .sort((i1: Item, i2: Item) => i1.name.localeCompare(i2.name)))
       );
   }
 
   addItem(item: Item): Observable<Item> {
     return this.http.post<Item>(this.url, item, this.httpOptions);
+  }
+
+  getItem(id: string): Observable<Item> {
+    return this.http.get<Item>(this._url + '/' + id);
   }
 }

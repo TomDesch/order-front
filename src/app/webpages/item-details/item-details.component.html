@@ -1,1 +1,24 @@
-<p>item-details works!</p>
+<!--We should be able to navigate to an Item's detail page:-->
+<!--By directly navigating to a url that contains the id of the item.-->
+<!--https://order-frontend-site.com/items/-->
+<!--By clicking on an item's name or image in the item overview.-->
+<!--The following information should be present on the item's detail page-->
+<!--Id-->
+<!--Name-->
+<!--Description-->
+<!--Price-->
+<!--Amount of (initial) Stock-->
+<!--Clicking the Back button should automatically navigate back to the Item overview.-->
+<!--No changes to the data can be made here, all contents is presented as labels or as read-only form elements-->
+<!--You can already add the Edit button as a placeholder.-->
+
+<ng-container>
+  <section id="item-details" class="tiny-dialog fader" *ngIf="itemToDisplay$ | async as itemData">
+    <label>{{itemData.id}}</label>
+    <label>{{itemData.name}}</label>
+    <label>{{itemData.description}}</label>
+    <label>{{itemData.price}}</label>
+    <label>{{itemData.amountOfStock}}</label>
+
+  </section>
+</ng-container>
