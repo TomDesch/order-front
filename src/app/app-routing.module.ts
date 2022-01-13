@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
-import {ItemOverviewComponent} from "./item-overview/item-overview.component";
-import {AddItemFormComponent} from "./add-item-form/add-item-form.component";
-import {HomepageComponent} from "./homepage/homepage.component";
+import {ItemOverviewComponent} from "./webpages/item-overview/item-overview.component";
+import {AddItemFormComponent} from "./webpages/add-item-form/add-item-form.component";
+import {HomepageComponent} from "./webpages/homepage/homepage.component";
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
