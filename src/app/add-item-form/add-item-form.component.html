@@ -25,8 +25,54 @@
         </div>
 
         <br>
-        <button class="button" type="submit">Add Item!</button>
+        <button class="button" type="submit" [disabled]="!addItemForm.valid">Add Item!</button>
 
+        <div class="error-messaging">
+          <div *ngIf="name.errors?.['minlength'] && !name.pristine">
+            <p class="invalid-message">The item's <strong>name</strong> must be at least 1 character long.</p>
+          </div>
+        </div>
+        <div class="error-messaging">
+          <div *ngIf="name.errors?.['required'] && !name.pristine">
+            <p class="invalid-message">The item's <strong>name</strong> is required.</p>
+          </div>
+        </div>
+
+        <div class="error-messaging">
+          <div *ngIf="description.errors?.['required']">
+            <p class="invalid-message">The <strong>description</strong> is required.</p>
+          </div>
+        </div>
+
+        <div class="error-messaging">
+          <div *ngIf="description.errors?.['maxlength'] && !description.pristine">
+            <p class="invalid-message">The <strong>description</strong> needs to be less than 255 characters.</p>
+          </div>
+        </div>
+
+        <div class="error-messaging">
+          <div *ngIf="price.errors?.['min'] && !price.pristine">
+            <p class="invalid-message">The <strong>price</strong> needs to be a positive number.</p>
+          </div>
+        </div>
+
+        <div class="error-messaging">
+          <div *ngIf="price.errors?.['required'] && !price.pristine">
+            <p class="invalid-message">The <strong>price</strong> is required.</p>
+          </div>
+        </div>
+
+        <div class="error-messaging">
+          <div *ngIf="amountOfStock.errors?.['min'] && !amountOfStock.pristine">
+            <p class="invalid-message">The <strong>amount of stock</strong> needs to be a positive number.</p>
+          </div>
+        </div>
+
+        <div class="error-messaging">
+          <div *ngIf="amountOfStock.errors?.['required'] && !amountOfStock.pristine">
+            <p class="invalid-message">The <strong>amount of stock</strong> is required.</p>
+          </div>
+        </div>
       </form>
 
     </div>
@@ -38,4 +84,11 @@
   <br>
   <br>
   <br>
+  <br>
+  <br> <br>
+  <br> <br>
+  <br> <br>
+  <br> <br> <br>
+
+
 </main>

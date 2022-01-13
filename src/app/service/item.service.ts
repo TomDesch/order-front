@@ -29,7 +29,6 @@ export class ItemService {
   }
 
   addItem(item: Item): Observable<Item> {
-    console.log(item.stockUrgency)
     return this.http.post<Item>(this.url, item, this.httpOptions);
   }
 }
